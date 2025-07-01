@@ -1,0 +1,342 @@
+/* Reset and Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #00ffff;
+}
+
+/* About Profile Image Section */
+.about-profile {
+  text-align: left;
+  padding: 50px 40px 20px 40px;
+  width: 100%;
+}
+
+.about-profile img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+}
+
+/* Main About Section */
+main {
+  padding: 30px 40px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+main h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #00ffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+main p {
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Buttons Section */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Social Media Icons Section */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+}
+
+footer p {
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #00ffff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Skills Section */
+#skills {
+  margin-top: 40px;
+}
+
+#skills h2, #skills h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.skills-group {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+}
+
+.skills-group h3 {
+  color: #00f5ff;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid #00f5ff;
+  padding-bottom: 8px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+}
+
+.skill-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  filter: brightness(1.2);
+}
+
+.skill-item span {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Experience / Timeline Section */
+#experience {
+  margin-top: 50px;
+}
+
+#experience h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #00f5ff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 3px solid #00f5ff;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #00f5ff;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba(0, 245, 255, 0.5);
+}
+
+.timeline-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  color: #00f5ff;
+}
+
+.timeline-content p {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+/* =========================== */
+/* Mobile Responsive Section   */
+/* =========================== */
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .about-profile,
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  main h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  main p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills-group {
+    width: 100%;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .timeline {
+    padding-left: 10px;
+    border-left: 2px solid #00f5ff;
+  }
+
+  .timeline-content {
+    padding: 12px 16px;
+  }
+
+  .timeline-item::before {
+    left: -12px;
+  }
+}
