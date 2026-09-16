@@ -1,0 +1,3623 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abiya V — Software Developer</title>
+
+<meta
+name="description"
+content="Abiya V — Software Developer specializing in web development, Java, Python, React, SQL, backend development, databases and cloud technologies."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background:
+        radial-gradient(circle at top right, rgba(0, 229, 255, 0.12), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(0, 140, 255, 0.10), transparent 30%),
+        #050b14;
+
+    color: #f4f7fb;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(rgba(0,229,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.025) 1px, transparent 1px);
+
+    background-size: 60px 60px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+
+/* =========================
+   PROFESSIONAL BACKGROUND GRAPHICS
+   ADDED
+========================= */
+
+.background-graphics {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* Soft ambient glow */
+
+.bg-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,229,255,0.07),
+            rgba(0,140,255,0.025) 45%,
+            transparent 72%
+        );
+
+    filter: blur(10px);
+
+    animation: bgGlowMove 14s ease-in-out infinite;
+}
+
+.bg-glow-one {
+    top: 8%;
+    left: -180px;
+}
+
+.bg-glow-two {
+    top: 55%;
+    right: -190px;
+
+    animation-delay: -6s;
+}
+
+.bg-glow-three {
+    top: 82%;
+    left: 35%;
+
+    width: 300px;
+    height: 300px;
+
+    animation-delay: -10s;
+}
+
+
+/* Developer circuit lines */
+
+.circuit-line {
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0,229,255,0.16),
+            transparent
+        );
+
+    opacity: 0.45;
+}
+
+.circuit-line-one {
+    width: 420px;
+
+    top: 24%;
+    left: -80px;
+
+    transform: rotate(25deg);
+
+    animation: circuitMove 9s linear infinite;
+}
+
+.circuit-line-two {
+    width: 500px;
+
+    top: 67%;
+    right: -130px;
+
+    transform: rotate(-25deg);
+
+    animation: circuitMoveReverse 11s linear infinite;
+}
+
+.circuit-line-three {
+    width: 350px;
+
+    top: 43%;
+    left: 20%;
+
+    transform: rotate(-12deg);
+
+    opacity: 0.22;
+}
+
+.circuit-line-four {
+    width: 300px;
+
+    top: 78%;
+    left: 5%;
+
+    transform: rotate(18deg);
+
+    opacity: 0.22;
+}
+
+
+/* Circuit nodes */
+
+.bg-node {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px rgba(0,229,255,0.8),
+        0 0 25px rgba(0,229,255,0.25);
+
+    opacity: 0.65;
+
+    animation: backgroundNodePulse 4s ease-in-out infinite;
+}
+
+.bg-node-one {
+    top: 20%;
+    left: 12%;
+}
+
+.bg-node-two {
+    top: 34%;
+    right: 17%;
+
+    animation-delay: -1s;
+}
+
+.bg-node-three {
+    top: 58%;
+    left: 8%;
+
+    animation-delay: -2s;
+}
+
+.bg-node-four {
+    top: 72%;
+    right: 10%;
+
+    animation-delay: -3s;
+}
+
+.bg-node-five {
+    top: 86%;
+    left: 45%;
+
+    animation-delay: -1.5s;
+}
+
+.bg-node-six {
+    top: 12%;
+    right: 38%;
+
+    animation-delay: -2.5s;
+}
+
+
+/* Small floating developer particles */
+
+.bg-particle {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 8px rgba(0,229,255,0.6);
+
+    opacity: 0.35;
+
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle-one {
+    top: 18%;
+    left: 25%;
+}
+
+.particle-two {
+    top: 31%;
+    left: 72%;
+
+    animation-delay: -2s;
+}
+
+.particle-three {
+    top: 49%;
+    left: 37%;
+
+    animation-delay: -4s;
+}
+
+.particle-four {
+    top: 61%;
+    right: 28%;
+
+    animation-delay: -1s;
+}
+
+.particle-five {
+    top: 76%;
+    left: 62%;
+
+    animation-delay: -5s;
+}
+
+.particle-six {
+    top: 91%;
+    left: 18%;
+
+    animation-delay: -3s;
+}
+
+.particle-seven {
+    top: 11%;
+    left: 82%;
+
+    animation-delay: -6s;
+}
+
+.particle-eight {
+    top: 42%;
+    right: 8%;
+
+    animation-delay: -2.5s;
+}
+
+
+/* Large subtle developer rings */
+
+.bg-ring {
+    position: absolute;
+
+    border: 1px solid rgba(0,229,255,0.045);
+
+    border-radius: 50%;
+
+    animation: backgroundRingRotate 35s linear infinite;
+}
+
+.bg-ring-one {
+    width: 500px;
+    height: 500px;
+
+    top: 12%;
+    right: -250px;
+}
+
+.bg-ring-two {
+    width: 650px;
+    height: 650px;
+
+    top: 48%;
+    left: -390px;
+
+    animation-direction: reverse;
+}
+
+.bg-ring-three {
+    width: 350px;
+    height: 350px;
+
+    top: 78%;
+    right: 10%;
+
+    opacity: 0.5;
+
+    animation-duration: 25s;
+}
+
+
+/* Background animations */
+
+@keyframes bgGlowMove {
+
+    0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(40px, -30px, 0) scale(1.08);
+    }
+}
+
+@keyframes circuitMove {
+
+    0% {
+        transform: translateX(-100px) rotate(25deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.45;
+    }
+
+    80% {
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translateX(160px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes circuitMoveReverse {
+
+    0% {
+        transform: translateX(100px) rotate(-25deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.45;
+    }
+
+    80% {
+        opacity: 0.45;
+    }
+
+    100% {
+        transform: translateX(-160px) rotate(-25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes backgroundNodePulse {
+
+    0%, 100% {
+        transform: scale(0.7);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+@keyframes particleFloat {
+
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translate3d(15px, -25px, 0);
+        opacity: 0.65;
+    }
+}
+
+@keyframes backgroundRingRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(5, 11, 20, 0.88);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 15px rgba(0,229,255,0.4);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #b9c4d0;
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+    background: rgba(0,229,255,0.06);
+}
+
+.nav-cta {
+    padding: 9px 18px !important;
+    border-radius: 8px;
+    border: 1px solid rgba(0,229,255,0.35);
+    color: #00e5ff !important;
+    font-weight: 600 !important;
+}
+
+.nav-cta:hover {
+    background: rgba(0,229,255,0.1) !important;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+/* Hidden on desktop */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    padding-top: 75px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 100px;
+
+    border: 1px solid rgba(0,229,255,0.08);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 100px rgba(0,229,255,0.04),
+        inset 0 0 80px rgba(0,229,255,0.03);
+
+    animation: rotateOrb 25s linear infinite;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -50px;
+    top: 200px;
+
+    border: 1px dashed rgba(0,229,255,0.12);
+
+    border-radius: 50%;
+
+    animation: rotateOrbReverse 18s linear infinite;
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(0,229,255,0.3);
+    border-radius: 30px;
+
+    color: #00e5ff;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+    background: rgba(0,229,255,0.05);
+
+    box-shadow:
+        0 0 20px rgba(0,229,255,0.04);
+}
+
+.hero-tag::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 10px rgba(0,229,255,0.8);
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 25px rgba(0,229,255,0.25);
+}
+
+.hero p {
+    max-width: 700px;
+
+    color: #aab5c3;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+
+    border: 1px solid #00e5ff;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #00e5ff;
+    color: #041018;
+
+    box-shadow:
+        0 0 25px rgba(0,229,255,0.08);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0,229,255,0.2);
+}
+
+.btn-outline {
+    color: #00e5ff;
+}
+
+.btn-outline:hover {
+    background: rgba(0,229,255,0.08);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO TECH GRAPHICS
+========================= */
+
+.hero-visual {
+    position: absolute;
+
+    right: 7%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 390px;
+    height: 390px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.tech-orbit {
+    position: absolute;
+
+    inset: 35px;
+
+    border: 1px solid rgba(0,229,255,0.16);
+
+    border-radius: 50%;
+
+    animation: rotateOrb 20s linear infinite;
+}
+
+.tech-orbit::before,
+.tech-orbit::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: #00e5ff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 20px rgba(0,229,255,0.8);
+}
+
+.tech-orbit::before {
+    top: -5px;
+    left: 50%;
+}
+
+.tech-orbit::after {
+    bottom: 20px;
+    right: -5px;
+}
+
+.tech-orbit-two {
+    position: absolute;
+
+    inset: 75px;
+
+    border: 1px dashed rgba(0,229,255,0.09);
+
+    border-radius: 50%;
+
+    animation: rotateOrbReverse 16s linear infinite;
+}
+
+.tech-orbit-two::before,
+.tech-orbit-two::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #00e5ff;
+
+    border-radius: 50%;
+
+    opacity: 0.7;
+
+    box-shadow:
+        0 0 14px rgba(0,229,255,0.7);
+}
+
+.tech-orbit-two::before {
+    top: -3px;
+    left: 50%;
+}
+
+.tech-orbit-two::after {
+    bottom: -3px;
+    right: 20%;
+}
+
+.tech-core {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,229,255,0.18),
+            rgba(0,229,255,0.05) 55%,
+            transparent 72%
+        );
+
+    border: 2px solid rgba(0,229,255,0.4);
+
+    box-shadow:
+        0 0 70px rgba(0,229,255,0.18),
+        inset 0 0 35px rgba(0,229,255,0.08);
+
+    animation: corePulse 4s ease-in-out infinite;
+}
+
+.tech-core::before {
+    content: "</>";
+
+    font-family: monospace;
+
+    font-size: 3.2rem;
+
+    font-weight: 700;
+
+    color: #00e5ff;
+
+    text-shadow:
+        0 0 15px rgba(0,229,255,0.5),
+        0 0 35px rgba(0,229,255,0.35);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.tech-core::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 38%,
+            transparent 45%,
+            rgba(5,11,20,0.35) 82%,
+            rgba(5,11,20,0.7) 100%
+        ),
+        linear-gradient(
+            160deg,
+            rgba(0,229,255,0.20),
+            transparent 45%,
+            rgba(0,20,30,0.4) 100%
+        );
+
+    pointer-events: none;
+}
+
+.floating-code {
+    position: absolute;
+
+    min-width: 48px;
+    height: 40px;
+
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(8,18,30,0.86);
+
+    border: 1px solid rgba(0,229,255,0.18);
+
+    color: #8feefa;
+
+    font-family: monospace;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25),
+        0 0 20px rgba(0,229,255,0.04);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+.floating-code::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    border: 1px solid rgba(0,229,255,0.06);
+
+    pointer-events: none;
+}
+
+.code-one {
+    top: 35px;
+    right: 25px;
+
+    font-size: 1rem;
+
+    animation: floatOne 4s ease-in-out infinite;
+}
+
+.code-two {
+    bottom: 40px;
+    left: 10px;
+
+    font-size: 1rem;
+
+    animation: floatTwo 5s ease-in-out infinite;
+}
+
+.code-three {
+    top: 150px;
+    right: -5px;
+
+    animation: floatOne 6s ease-in-out infinite;
+}
+
+.code-four {
+    bottom: 85px;
+    right: 20px;
+
+    font-size: 1.1rem;
+
+    animation: floatTwo 4.5s ease-in-out infinite;
+}
+
+.code-five {
+    top: 75px;
+    left: 15px;
+
+    font-size: 1rem;
+
+    animation: floatOne 5.5s ease-in-out infinite;
+}
+
+.code-six {
+    bottom: 15px;
+    right: 125px;
+
+    font-size: 1rem;
+
+    animation: floatTwo 6.5s ease-in-out infinite;
+}
+
+.tech-node {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 12px rgba(0,229,255,0.7);
+
+    opacity: 0.8;
+
+    z-index: 4;
+}
+
+.node-one {
+    top: 100px;
+    left: 85px;
+
+    animation:
+        nodePulse 3s ease-in-out infinite;
+}
+
+.node-two {
+    bottom: 105px;
+    right: 80px;
+
+    animation:
+        nodePulse 4s ease-in-out infinite;
+}
+
+.node-three {
+    top: 190px;
+    left: 25px;
+
+    animation:
+        nodePulse 5s ease-in-out infinite;
+}
+
+
+/* =========================
+   GRAPHIC ANIMATIONS
+========================= */
+
+@keyframes rotateOrb {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateOrbReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes corePulse {
+    0%, 100% {
+        box-shadow:
+            0 0 70px rgba(0,229,255,0.18),
+            inset 0 0 35px rgba(0,229,255,0.08);
+    }
+
+    50% {
+        box-shadow:
+            0 0 95px rgba(0,229,255,0.28),
+            inset 0 0 45px rgba(0,229,255,0.12);
+    }
+}
+
+@keyframes floatOne {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatTwo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes nodePulse {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+
+        box-shadow:
+            0 0 20px rgba(0,229,255,0.9);
+    }
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    color: #00e5ff;
+
+    background: rgba(0,229,255,0.06);
+
+    border: 1px solid rgba(0,229,255,0.18);
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.section-title span::before {
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+
+    margin-top: 16px;
+}
+
+.section-title p {
+    color: #8996a5;
+
+    max-width: 650px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-text {
+    display: flow-root;
+}
+
+.about-photo {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+    float: left;
+
+    margin: 0 28px 18px 0;
+
+    border: 2px solid rgba(0,229,255,0.35);
+
+    box-shadow:
+        0 0 35px rgba(0,229,255,0.12),
+        inset 0 0 20px rgba(0,229,255,0.05);
+}
+
+.about-text p {
+    color: #aab5c3;
+
+    margin-bottom: 18px;
+}
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.stat-card,
+.expertise-card,
+.skill-card,
+.project-card,
+.cert-card,
+.timeline-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.015)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.stat-card::before,
+.expertise-card::before,
+.skill-card::before,
+.project-card::before,
+.cert-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -50px;
+    top: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(0,229,255,0.05);
+
+    transition: 0.4s;
+}
+
+.stat-card:hover::before,
+.expertise-card:hover::before,
+.skill-card:hover::before,
+.project-card:hover::before,
+.cert-card:hover::before {
+    transform: scale(2.5);
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stat-card {
+    padding: 25px;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0,229,255,0.25);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.2);
+}
+
+.stat-card h3 {
+    color: #00e5ff;
+
+    font-size: 2rem;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.stat-card p {
+    color: #8996a5;
+
+    font-size: 0.9rem;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   EXPERTISE
+========================= */
+
+.expertise-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.expertise-card {
+    padding: 30px;
+
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+.expertise-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(0,229,255,0.35);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.2);
+}
+
+.expertise-icon {
+    position: relative;
+
+    z-index: 1;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0,229,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.25);
+
+    color: #00e5ff;
+
+    font-family: monospace;
+
+    font-weight: 700;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 18px;
+}
+
+.expertise-card h3,
+.expertise-card p {
+    position: relative;
+
+    z-index: 1;
+}
+
+.expertise-card h3 {
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.expertise-card p {
+    color: #8996a5;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0,229,255,0.25);
+}
+
+.skill-card h3 {
+    color: #00e5ff;
+
+    font-weight: 600;
+
+    font-size: 1rem;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.skill {
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(0,229,255,0.07);
+
+    border: 1px solid rgba(0,229,255,0.15);
+
+    color: #c8d4df;
+
+    font-size: 0.82rem;
+
+    transition: 0.3s;
+}
+
+.skill:hover {
+    color: #00e5ff;
+
+    border-color: rgba(0,229,255,0.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline {
+    position: relative;
+
+    max-width: 900px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #00e5ff,
+            rgba(0,229,255,0.05)
+        );
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 40px;
+
+    margin-bottom: 22px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+
+    top: 26px;
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #00e5ff;
+
+    box-shadow:
+        0 0 15px rgba(0,229,255,0.5);
+
+    z-index: 1;
+}
+
+.timeline-card {
+    border-radius: 14px;
+
+    padding: 22px 26px;
+
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: rgba(0,229,255,0.25);
+
+    transform: translateX(4px);
+}
+
+.timeline-date {
+    color: #00e5ff;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.timeline-item h3 {
+    font-weight: 600;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 4px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.timeline-item h4 {
+    color: #9ba8b7;
+
+    font-weight: 500;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.timeline-item p {
+    color: #8996a5;
+
+    max-width: 750px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.completed {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    padding: 3px 9px;
+
+    border-radius: 20px;
+
+    font-size: 0.7rem;
+
+    color: #00e5ff;
+
+    border: 1px solid rgba(0,229,255,0.25);
+
+    background: rgba(0,229,255,0.06);
+
+    vertical-align: middle;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.project-card {
+    padding: 28px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(0,229,255,0.35);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.25);
+}
+
+.project-index {
+    position: relative;
+
+    z-index: 1;
+
+    font-family: monospace;
+
+    font-size: 0.75rem;
+
+    color: #4a5b6c;
+
+    margin-bottom: 12px;
+}
+
+.project-card h3,
+.project-card p,
+.project-tech,
+.project-link {
+    position: relative;
+
+    z-index: 1;
+}
+
+.project-card h3 {
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #8996a5;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 18px;
+
+    flex-grow: 1;
+}
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 20px;
+}
+
+.project-tech span {
+    font-size: 0.72rem;
+
+    font-weight: 500;
+
+    padding: 4px 10px;
+
+    border-radius: 6px;
+
+    color: #00e5ff;
+
+    background: rgba(0,229,255,0.06);
+
+    border: 1px solid rgba(0,229,255,0.14);
+}
+
+.project-link {
+    color: #00e5ff;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.project-link-static {
+    display: inline-block;
+
+    color: #7c8a99;
+
+    cursor: default;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.cert-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.cert-card {
+    padding: 22px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0,229,255,0.25);
+}
+
+.cert-icon {
+    position: relative;
+
+    z-index: 1;
+
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(0,229,255,0.08);
+
+    border: 1px solid rgba(0,229,255,0.22);
+
+    color: #00e5ff;
+
+    font-size: 0.85rem;
+}
+
+.cert-card h3,
+.cert-card p {
+    position: relative;
+
+    z-index: 1;
+}
+
+.cert-card h3 {
+    font-weight: 600;
+
+    font-size: 1rem;
+
+    margin-bottom: 6px;
+}
+
+.cert-card p {
+    color: #8996a5;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    padding: 50px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0,229,255,0.15);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,229,255,0.04),
+            rgba(0,140,255,0.02)
+        );
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.contact-box::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0,229,255,0.08);
+
+    left: -120px;
+    bottom: -120px;
+}
+
+.contact-box h2 {
+    font-weight: 700;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.contact-box p {
+    color: #8996a5;
+
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.contact-box > .btn {
+    position: relative;
+
+    z-index: 1;
+}
+
+.social-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.social-links a {
+    padding: 10px 16px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 8px;
+
+    color: #aab5c3;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #00e5ff;
+
+    border-color: rgba(0,229,255,0.3);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.07);
+
+    text-align: center;
+
+    color: #657281;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-visual {
+        width: 350px;
+        height: 350px;
+
+        right: -60px;
+
+        opacity: 0.35;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
+    .nav-container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 5px;
+
+        cursor: pointer;
+
+        border: 1px solid rgba(0,229,255,0.25);
+        border-radius: 8px;
+
+        background: rgba(0,229,255,0.05);
+
+        transition: 0.3s;
+
+        z-index: 1002;
+    }
+
+    .menu-icon:hover {
+        background: rgba(0,229,255,0.1);
+        border-color: rgba(0,229,255,0.45);
+    }
+
+    .menu-icon span {
+        display: block;
+
+        width: 20px;
+        height: 2px;
+
+        background: #00e5ff;
+
+        border-radius: 5px;
+
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        display: flex;
+
+        position: absolute;
+
+        top: 75px;
+        right: 0;
+
+        width: 220px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        padding: 12px;
+
+        background: rgba(5, 11, 20, 0.97);
+
+        border: 1px solid rgba(255,255,255,0.08);
+
+        border-radius: 12px;
+
+        backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 20px 40px rgba(0,0,0,0.35);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
+
+        pointer-events: none;
+
+        z-index: 1001;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 11px 14px;
+
+        border-radius: 8px;
+
+        font-size: 0.9rem;
+    }
+
+    .nav-links .nav-cta {
+        text-align: center;
+
+        margin-top: 4px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+        pointer-events: auto;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    .about-grid,
+    .expertise-grid,
+    .skills-grid,
+    .projects-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-visual {
+        width: 330px;
+        height: 330px;
+
+        opacity: 0.18;
+
+        right: -100px;
+    }
+
+    .about-photo {
+        float: none;
+
+        margin: 0 auto 25px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .contact-box {
+        padding: 35px 20px;
+    }
+
+    /* Reduce background graphics slightly on smaller screens */
+
+    .bg-ring-one {
+        right: -350px;
+    }
+
+    .bg-ring-two {
+        left: -470px;
+    }
+
+    .circuit-line-one {
+        left: -180px;
+    }
+
+    .circuit-line-two {
+        right: -220px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-links {
+        width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+
+        letter-spacing: -2px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    /* Keep background effects subtle on phones */
+
+    .bg-glow {
+        opacity: 0.55;
+    }
+
+    .bg-ring {
+        opacity: 0.45;
+    }
+
+    .circuit-line {
+        opacity: 0.18;
+    }
+
+    .bg-node {
+        opacity: 0.4;
+    }
+
+    .bg-particle {
+        opacity: 0.2;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     PROFESSIONAL BACKGROUND
+     GRAPHICS
+========================= -->
+
+<div class="background-graphics">
+
+    <div class="bg-glow bg-glow-one"></div>
+
+    <div class="bg-glow bg-glow-two"></div>
+
+    <div class="bg-glow bg-glow-three"></div>
+
+
+    <div class="bg-ring bg-ring-one"></div>
+
+    <div class="bg-ring bg-ring-two"></div>
+
+    <div class="bg-ring bg-ring-three"></div>
+
+
+    <div class="circuit-line circuit-line-one"></div>
+
+    <div class="circuit-line circuit-line-two"></div>
+
+    <div class="circuit-line circuit-line-three"></div>
+
+    <div class="circuit-line circuit-line-four"></div>
+
+
+    <div class="bg-node bg-node-one"></div>
+
+    <div class="bg-node bg-node-two"></div>
+
+    <div class="bg-node bg-node-three"></div>
+
+    <div class="bg-node bg-node-four"></div>
+
+    <div class="bg-node bg-node-five"></div>
+
+    <div class="bg-node bg-node-six"></div>
+
+
+    <div class="bg-particle particle-one"></div>
+
+    <div class="bg-particle particle-two"></div>
+
+    <div class="bg-particle particle-three"></div>
+
+    <div class="bg-particle particle-four"></div>
+
+    <div class="bg-particle particle-five"></div>
+
+    <div class="bg-particle particle-six"></div>
+
+    <div class="bg-particle particle-seven"></div>
+
+    <div class="bg-particle particle-eight"></div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<div class="container nav-container">
+
+    <a href="#home" class="logo">
+        AV
+    </a>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <input
+        type="checkbox"
+        id="menu-toggle"
+        class="menu-toggle"
+    >
+
+    <label
+        for="menu-toggle"
+        class="menu-icon"
+        aria-label="Toggle navigation menu"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#work">Work</a>
+        </li>
+
+        <li>
+            <a href="#contact" class="nav-cta">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+
+<div class="container">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            SOFTWARE DEVELOPER
+        </span>
+
+        <h1>
+            Hi, I'm <span>Abiya V</span>
+        </h1>
+
+        <p>
+            Software Developer with internship experience at
+            Cognizant (CTS), focused on building practical web
+            applications, backend systems and database-driven
+            solutions. Skilled in Java, Python, React, JavaScript,
+            SQL and Supabase, with practical exposure to AWS
+            cloud technologies.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#work"
+                class="btn btn-primary">
+                View My Work
+            </a>
+
+            <a
+                href="https://drive.google.com/file/d/1ucL3BJ4XXcTa8pTKi5AesHshEn6p87J4/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                View Resume
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/abiya-venkidusubbu-606627256"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline">
+                LinkedIn ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TECH GRAPHIC -->
+
+<div class="hero-visual">
+
+    <div class="tech-orbit"></div>
+
+    <div class="tech-orbit tech-orbit-two"></div>
+
+    <div class="tech-core"></div>
+
+    <div class="floating-code code-one">
+        &lt;/&gt;
+    </div>
+
+    <div class="floating-code code-two">
+        { }
+    </div>
+
+    <div class="floating-code code-three">
+        SQL
+    </div>
+
+    <div class="floating-code code-four">
+        ⚙
+    </div>
+
+    <div class="floating-code code-five">
+        ⌘
+    </div>
+
+    <div class="floating-code code-six">
+        ◈
+    </div>
+
+    <div class="tech-node node-one"></div>
+
+    <div class="tech-node node-two"></div>
+
+    <div class="tech-node node-three"></div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            About Me
+        </span>
+
+        <h2>
+            Building with purpose
+        </h2>
+
+        <p>
+            A software developer focused on practical development,
+            continuous learning and building useful digital solutions.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <img
+                src="img.jpeg"
+                alt="Abiya V - Software Developer"
+                class="about-photo"
+            >
+
+            <p>
+                I am a B.Tech Computer Science and Engineering
+                graduate with internship experience at Cognizant
+                (CTS) and practical experience in software
+                development, web technologies, databases and
+                backend development.
+            </p>
+
+            <p>
+                I am currently expanding my knowledge of cloud
+                computing and modern application architecture,
+                with a particular interest in AWS, scalable systems,
+                databases and serverless solutions. I aim to build
+                applications that are efficient, maintainable and
+                useful to their intended users.
+            </p>
+
+            <p>
+                My professional journey has given me the opportunity
+                to work on practical projects, collaborate in team
+                environments and understand the development process
+                from requirements to implementation. These
+                experiences have helped me strengthen my
+                problem-solving abilities, adaptability and approach
+                to creating effective solutions.
+            </p>
+
+            <p>
+                I value continuous learning, problem-solving and
+                attention to detail, and I enjoy turning ideas into
+                practical solutions while growing as a technology
+                professional.
+            </p>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <h3>
+                    5+
+                </h3>
+
+                <p>
+                    Development Projects
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    4+
+                </h3>
+
+                <p>
+                    Internship & Training Experiences
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    10+
+                </h3>
+
+                <p>
+                    Certifications & Programs
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>
+                    B.Tech
+                </h3>
+
+                <p>
+                    Computer Science & Engineering
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     EXPERTISE
+========================= -->
+
+<section>
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            Expertise
+        </span>
+
+        <h2>
+            What I work with
+        </h2>
+
+    </div>
+
+
+    <div class="expertise-grid">
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                Building responsive and user-focused web
+                applications using HTML, CSS, JavaScript,
+                React, PHP and Bootstrap.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                API
+            </div>
+
+            <h3>
+                Backend Development
+            </h3>
+
+            <p>
+                Developing application logic, backend workflows,
+                APIs, authentication and database-driven
+                functionality using Supabase and PHP.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                DB
+            </div>
+
+            <h3>
+                Database Management
+            </h3>
+
+            <p>
+                Working with SQL, MySQL, PostgreSQL and Supabase
+                for database design, queries, integration and
+                application data management.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                JV
+            </div>
+
+            <h3>
+                Java & Python
+            </h3>
+
+            <p>
+                Using Java and Python for programming, problem
+                solving, application development and building a
+                strong foundation in software development.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                ☁
+            </div>
+
+            <h3>
+                Cloud Computing
+            </h3>
+
+            <p>
+                Working with AWS services including EC2, S3,
+                Lambda, API Gateway, VPC, DynamoDB, Redshift,
+                Glue and other cloud technologies.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                🔐
+            </div>
+
+            <h3>
+                Authentication & APIs
+            </h3>
+
+            <p>
+                Working with user authentication, authorization,
+                API integration and secure access to application
+                resources and databases.
+            </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+            <div class="expertise-icon">
+                &gt;_
+            </div>
+
+            <h3>
+                Development Tools
+            </h3>
+
+            <p>
+                Using Git, GitHub, VS Code, Android Studio and
+                other development tools for coding, debugging,
+                version control and project development.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            Technical Skills
+        </span>
+
+        <h2>
+           Technical toolkit      
+	</h2>
+
+        <p>
+            Technologies and tools I have worked with through
+            internships, projects, academic work and hands-on
+            technical practice.
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+            <h3>
+                Programming & Web
+            </h3>
+
+            <div class="skills">
+
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">PHP</span>
+                <span class="skill">React</span>
+                <span class="skill">Bootstrap</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Database & Backend
+            </h3>
+
+            <div class="skills">
+
+                <span class="skill">SQL</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">PostgreSQL</span>
+                <span class="skill">Supabase</span>
+                <span class="skill">REST APIs</span>
+                <span class="skill">Authentication</span>
+                <span class="skill">Authorization</span>
+                <span class="skill">Database Integration</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Cloud & AWS
+            </h3>
+
+            <div class="skills">
+
+                <span class="skill">AWS</span>
+                <span class="skill">EC2</span>
+                <span class="skill">S3</span>
+                <span class="skill">Lambda</span>
+                <span class="skill">API Gateway</span>
+                <span class="skill">EventBridge</span>
+                <span class="skill">Kinesis</span>
+                <span class="skill">VPC</span>
+                <span class="skill">IAM</span>
+                <span class="skill">DynamoDB</span>
+                <span class="skill">Redshift</span>
+                <span class="skill">AWS Glue</span>
+                <span class="skill">Cognito</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                Tools & Development
+            </h3>
+
+            <div class="skills">
+
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">VS Code</span>
+                <span class="skill">Android Studio</span>
+                <span class="skill">Java OOP</span>
+                <span class="skill">DBMS</span>
+                <span class="skill">Data Warehouse</span>
+                <span class="skill">ETL</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>
+                AI & Machine Learning
+            </h3>
+
+            <div class="skills">
+
+                <span class="skill">BERT</span>
+                <span class="skill">Autoencoder</span>
+                <span class="skill">MLP</span>
+                <span class="skill">YOLO</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">scikit-learn</span>
+                <span class="skill">Fraud Detection</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            Experience & Learning
+        </span>
+
+        <h2>
+            My professional journey
+        </h2>
+
+        <p>
+            Internship experience, application development,
+            practical projects and continuous technical learning.
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    2025 — 2026
+                </div>
+
+                <h3>
+                    Software Development Intern / Trainee
+
+                    <span class="completed">
+                        Completed
+                    </span>
+                </h3>
+
+                <h4>
+                    Cognizant
+                </h4>
+
+                <p>
+                    Completed a software development internship
+                    with hands-on experience in React, Supabase,
+                    authentication, database integration and
+                    backend development. Contributed to a Social
+                    Determinants of Health platform by working on
+                    user registration, patient information,
+                    authentication and database-driven workflows.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    Continuous Learning
+                </div>
+
+                <h3>
+                    AWS Cloud — Continuous Learning
+                </h3>
+
+                <h4>
+                    Cloud & Infrastructure Development
+                </h4>
+
+                <p>
+                    Continuously strengthening knowledge of AWS
+                    cloud technologies through hands-on learning
+                    and technical practice. Areas include EC2,
+                    S3, Lambda, API Gateway, VPC, IAM, Cognito,
+                    DynamoDB, Redshift and AWS Glue.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    Apr 2025 — Jun 2025
+                </div>
+
+                <h3>
+                    Android Developer Virtual Intern
+                </h3>
+
+                <h4>
+                    EduSkills • AICTE • Google for Developers
+                </h4>
+
+                <p>
+                    Completed a 10-week virtual internship focused
+                    on Android application development using Java
+                    and Android Studio. Gained practical exposure
+                    to activities, fragments, UI/UX and backend
+                    integration.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    2025
+                </div>
+
+                <h3>
+                    HTML / CSS Developer Trainee
+                </h3>
+
+                <h4>
+                    Innovatecloud Solutions
+                </h4>
+
+                <p>
+                    Gained practical frontend development
+                    experience using HTML and CSS. Developed
+                    the Freelancer Connect project as a practical
+                    landing-page concept for connecting
+                    freelancers with clients.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    Mar 2024 — Apr 2024
+                </div>
+
+                <h3>
+                    Java Developer Intern
+                </h3>
+
+                <h4>
+                    CodSoft
+                </h4>
+
+                <p>
+                    Gained practical experience with Java
+                    programming and strengthened programming,
+                    problem-solving and application development
+                    fundamentals.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <div class="timeline-date">
+                    B.Tech
+                </div>
+
+                <h3>
+                    Computer Science & Engineering
+                </h3>
+
+                <h4>
+                    Sri Manakula Vinayagar Engineering College
+                </h4>
+
+                <p>
+                    Built a strong foundation in programming,
+                    databases, web technologies, software
+                    engineering, cloud computing and core
+                    computer science concepts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="work">
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            Selected Work
+        </span>
+
+        <h2>
+            Projects I've built
+        </h2>
+
+        <p>
+            Practical projects developed through internships,
+            academic work and independent learning.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <div class="project-card">
+
+            <div class="project-index">
+                01 / 05
+            </div>
+
+            <h3>
+                Social Determinants of Health Platform
+            </h3>
+
+            <p>
+                A healthcare-focused platform designed to combine
+                health and social determinant information to help
+                identify at-risk populations. My contribution
+                focused on backend development, authentication,
+                patient registration and database integration.
+            </p>
+
+            <div class="project-tech">
+
+                <span>React</span>
+                <span>Supabase</span>
+                <span>JavaScript</span>
+                <span>PostgreSQL</span>
+                <span>Authentication</span>
+                <span>Backend</span>
+
+            </div>
+
+            <span class="project-link project-link-static">
+                🔒 Private company project
+            </span>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-index">
+                02 / 05
+            </div>
+
+            <h3>
+                Online Grocery Shop
+            </h3>
+
+            <p>
+                A database-driven grocery shopping website
+                developed to demonstrate frontend development,
+                PHP backend integration and MySQL database
+                management.
+            </p>
+
+            <a href="https://abiya156.github.io/online-grocery-shop-website/" target="_blank" rel="noopener noreferrer" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-index">
+                03 / 05
+            </div>
+
+            <h3>
+                Career Guidance Website
+            </h3>
+
+            <p>
+                A responsive career guidance website designed
+                to provide students with useful information,
+                resources and direction for career planning.
+            </p>
+
+            <a href="https://abiya156.github.io/Career-guidance/" target="_blank" rel="noopener noreferrer" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-index">
+                04 / 05
+            </div>
+
+            <h3>
+                Freelancer Connect
+            </h3>
+
+            <p>
+                A responsive frontend landing page concept
+                designed to connect freelancers with potential
+                clients and demonstrate practical HTML and CSS
+                development skills.
+            </p>
+
+            <a href="https://abiya156.github.io/Connecting-Freelancher-and-clients/" target="_blank" rel="noopener noreferrer" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <div class="project-index">
+                05 / 05
+            </div>
+
+            <h3>
+                Context Aware AI for Multi-Modal Fraud Detection
+            </h3>
+
+            <p>
+                An AI-driven fraud detection framework that combines
+                device and IP patterns, KYC information, identity
+                images and human interaction behavior to identify
+                suspicious accounts and evolving fraud patterns.
+            </p>
+
+            <div class="project-tech">
+
+                <span>BERT</span>
+                <span>Autoencoder</span>
+                <span>MLP</span>
+                <span>YOLO</span>
+                <span>PyTorch</span>
+                <span>TensorFlow</span>
+                <span>scikit-learn</span>
+                <span>Fraud Detection</span>
+
+            </div>
+
+            <span class="project-link project-link-static">
+                🎓 University Project
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section>
+
+
+<div class="container">
+
+    <div class="section-title">
+
+        <span>
+            Certifications
+        </span>
+
+        <h2>
+            Learning & certifications
+        </h2>
+
+        <p>
+            Certifications and learning programs that support
+            my technical development.
+        </p>
+
+    </div>
+
+
+    <div class="cert-grid">
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    Database Management Systems
+                </h3>
+
+                <p>
+                    NPTEL
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    Front End Web Developer Certification
+                </h3>
+
+                <p>
+                    Infosys
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    Networking & Web Technology
+                </h3>
+
+                <p>
+                    Infosys
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    HTML5
+                </h3>
+
+                <p>
+                    Infosys Springboard
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    Android Developer Virtual Internship
+                </h3>
+
+                <p>
+                    EduSkills • AICTE • Google for Developers
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    RPA Citizen Developer
+                </h3>
+
+                <p>
+                    UiPath
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cert-card">
+
+            <div class="cert-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    AWS Cloud — Continuous Learning
+                </h3>
+
+                <p>
+                    Ongoing learning and hands-on practice in
+                    AWS cloud services, infrastructure and
+                    cloud application concepts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+
+<div class="container">
+
+    <div class="contact-box">
+
+        <h2>
+            Let's connect
+        </h2>
+
+        <p>
+            I am open to software development opportunities,
+            technical discussions, collaboration and
+            professional connections.
+        </p>
+
+        <a
+            href="mailto:vengatsubu1004@gmail.com"
+            class="btn btn-primary">
+            Get In Touch
+        </a>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://www.linkedin.com/in/abiya-venkidusubbu-606627256"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+
+            <a
+                href="https://github.com/ABIYA156"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+            <a
+                href="mailto:vengatsubu1004@gmail.com">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+<div class="container">
+
+    © 2026 Abiya V. All rights reserved.
+
+</div>
+
+
+</footer>
+
+</body>
+
+</html>
